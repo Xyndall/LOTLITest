@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerBullet
+  - EnemyBullet
+  - Enemy
+  - GunInventory
+  - InventoryParent
+  - Ground
+  - ItemChoice
+  - EnemySpawner
+  - GameManager
+  - ShopManager
+  - InventoryCanvas
+  - Spawn
+  - Shield
+  - Transition
+  - Boss
+  - RoomSpawn
+  - HUD
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - PostProcessing
+  - Water
+  - UI
+  - Player
+  - PlayerBullet
+  - Enemies
+  - WhatIsGround
+  - WhatIsWall
+  - EnemyBullet
+  - ProhectileFire
+  - Ground
+  - WhatIsObject
+  - EnvironmentalDanger
+  - playerCollisionNoBullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 2962752415
+    locked: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0785e690c9aa6a44fbcab067172154fa, type: 3}
+  m_Name: ProjectileSize
+  m_EditorClassIdentifier: 
+  name: Projectile Size
+  icon: {fileID: 21300000, guid: 8344d8e043b1e634883300378eb4586a, type: 3}
+  itemDescription: Increase Projectile Size
+  itemUpgradeDescription: 10% extra size increase and damage
+  itemType: 4
+  amount: 0.5
+  Rarity: 0
+  UpgradeAmount: 0
+  AddedAmount: 0.2
+  baselevel: 0
+  level: 0
+  maxLevel: 5
+  Cost: 2

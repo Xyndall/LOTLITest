@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7699816710013258533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7699816710013258534}
+  m_Layer: 0
+  m_Name: Enemies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &7699816710013258534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699816710013258533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7699816711054587750}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7699816711054587749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7699816711054587750}
+  - component: {fileID: 7699816711054587751}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: EnemySpawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &7699816711054587750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699816711054587749}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7699816710013258534}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7699816711054587751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699816711054587749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea73a5dab02437841a25124a82134aaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnedEnemies: 0
+  spawnZones:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyPrefabs:
+  - {fileID: 6863048175042571366, guid: 251e54ca16bac95448dc90428e30a10f, type: 3}
+  - {fileID: 5358434572988660450, guid: 43eab1bc50687b94e960cba1e1021fe2, type: 3}
+  - {fileID: 1285963492731193792, guid: adde9f9565f7a4c44a42cf3fcb2edaf3, type: 3}
+  - {fileID: 4218761701097742167, guid: e0c8f53984053744382b0fde80f5dfa1, type: 3}
+  - {fileID: 6888162441433419997, guid: 6c8cbb3e0d02f4842a9fbb2fd9758b7a, type: 3}
+  - {fileID: 7350509462297052140, guid: 31f4af28746187048b665f3b28650557, type: 3}
+  - {fileID: 3307521731157396062, guid: 535aa4f2b4c056141b0f241afa2edf82, type: 3}
+  - {fileID: 3307521731157396062, guid: f726295ed83e0644da52a9622f7f5094, type: 3}
+  - {fileID: 3307521731157396062, guid: ea7cd883e7ac9774fb414d8d50571fa6, type: 3}
+  - {fileID: 3307521731157396062, guid: c4aeae97530f95a4db0a407ece9daf72, type: 3}
+  - {fileID: 3307521731157396062, guid: 53f9df8aa676a9a43bac43cac243720d, type: 3}
+  enemyList: []
+  ElitePrefabs:
+  - {fileID: 3307521731157396062, guid: 1bd22c52f38ebeb46a8d5a9efc02f2a8, type: 3}
+  - {fileID: 3307521731157396062, guid: 53589ca6dd8f841438e0bdbd7dd54647, type: 3}
+  - {fileID: 3565683209605131544, guid: a14aded1672fe3e4e9ae5f5dc22716fe, type: 3}
+  - {fileID: 7340522601798896564, guid: baa32e4749e55e84eb6e5400cfaae706, type: 3}
+  - {fileID: 5110083538416064819, guid: 4c4477f0bbec16e44bad5f32db3d3619, type: 3}
+  - {fileID: 7478370305448864161, guid: 9c48bf6f08d026e4faef1290651b00a8, type: 3}
+  BossPrefabs: {fileID: 7771385933403044320, guid: 53e1ca194f5713d4796112b89a351a67, type: 3}
+  maxEnemySpawn: 2
+  EnemySpawnEffect: {fileID: 1007489450165806, guid: 6e1e59f2c5ce521499157f9b16215908, type: 3}
+  EnemyParent: {fileID: 7699816710013258534}
+  showItems: 0
+  WaveNumber: 4
+  MaxWaves: 0
+  StartedWaves: 0
+  nextWave: 0
+  NextWaveTimer: 10
+  resetTimer: 10
+  manager: {fileID: 0}
+  additionMultiplier: 11
+  powerMultiplier: 2
+  divisionMultiplier: 7

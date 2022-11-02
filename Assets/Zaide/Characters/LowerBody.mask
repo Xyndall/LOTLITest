@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LowerBody
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Character_Main:Mesh
+    m_Weight: 1
+  - m_Path: Chest_J
+    m_Weight: 1
+  - m_Path: Chest_J/Hip_J
+    m_Weight: 1
+  - m_Path: Chest_J/Hip_J/L_Leg_J
+    m_Weight: 1
+  - m_Path: Chest_J/Hip_J/L_Leg_J/L_Foot_J
+    m_Weight: 0
+  - m_Path: Chest_J/Hip_J/L_Leg_J/L_Foot_J/L_Toe_J
+    m_Weight: 1
+  - m_Path: Chest_J/Hip_J/R_Leg_J
+    m_Weight: 1
+  - m_Path: Chest_J/Hip_J/R_Leg_J/R_Foot_J
+    m_Weight: 0
+  - m_Path: Chest_J/Hip_J/R_Leg_J/R_Foot_J/R_Toe_J
+    m_Weight: 1
+  - m_Path: Chest_J/L_Arm_J
+    m_Weight: 1
+  - m_Path: Chest_J/L_Arm_J/L_Hand_J
+    m_Weight: 1
+  - m_Path: Chest_J/Neck_J
+    m_Weight: 0
+  - m_Path: Chest_J/Neck_J/Head_J
+    m_Weight: 0
+  - m_Path: Chest_J/R_Arm_J
+    m_Weight: 0
+  - m_Path: Chest_J/R_Arm_J/R_Hand_J
+    m_Weight: 0
+  - m_Path: Chest_J/R_Arm_J/R_Hand_J/Gun_Part2_J
+    m_Weight: 1
+  - m_Path: Chest_J/R_Arm_J/R_Hand_J/Gun_Part2_J/Gun_Mount_J
+    m_Weight: 1

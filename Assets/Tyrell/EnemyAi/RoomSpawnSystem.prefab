@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1222554625270267139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315384227377318012}
+  - component: {fileID: 4402741620579993110}
+  m_Layer: 0
+  m_Name: RoomSpawnSystem
+  m_TagString: RoomSpawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1315384227377318012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222554625270267139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.31535, y: -6.1921654, z: 17.152435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4402741620579993110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222554625270267139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d05382183a0a4947a03cefb974e7040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnZones:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyPrefabs:
+  - {fileID: 6863048175042571366, guid: 251e54ca16bac95448dc90428e30a10f, type: 3}
+  - {fileID: 5358434572988660450, guid: 43eab1bc50687b94e960cba1e1021fe2, type: 3}
+  - {fileID: 1285963492731193792, guid: adde9f9565f7a4c44a42cf3fcb2edaf3, type: 3}
+  - {fileID: 3307521731157396062, guid: 535aa4f2b4c056141b0f241afa2edf82, type: 3}
+  - {fileID: 3307521731157396062, guid: f726295ed83e0644da52a9622f7f5094, type: 3}
+  - {fileID: 3307521731157396062, guid: ea7cd883e7ac9774fb414d8d50571fa6, type: 3}
+  - {fileID: 3307521731157396062, guid: c4aeae97530f95a4db0a407ece9daf72, type: 3}
+  - {fileID: 3307521731157396062, guid: 53f9df8aa676a9a43bac43cac243720d, type: 3}
+  - {fileID: 4218761701097742167, guid: e0c8f53984053744382b0fde80f5dfa1, type: 3}
+  - {fileID: 6888162441433419997, guid: 6c8cbb3e0d02f4842a9fbb2fd9758b7a, type: 3}
+  - {fileID: 7350509462297052140, guid: 31f4af28746187048b665f3b28650557, type: 3}
+  enemyList: []
+  maxEnemySpawn: 5
+  EnemySpawnEffect: {fileID: 1007489450165806, guid: 6e1e59f2c5ce521499157f9b16215908, type: 3}
