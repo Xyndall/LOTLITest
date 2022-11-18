@@ -31,16 +31,23 @@ public class RoomManager : MonoBehaviour
     public List<GameObject> ChallengeRoomList = new List<GameObject>();
     public List<GameObject> HallWay = new List<GameObject>();
     public GameObject HallWayToBoss;
+    
 
     int hallwayNum;
     public int RoomNumber = 0;
+
+    //Docks
+    [Header("Docks Stuff")]
+    public Transform[] DockSpawn;
+    public GameObject Docks;
+    public GameObject OctoBoss;
 
 
     //Sets Player position at start of game
     public Transform player;
     Vector3 pos;
     float playerYPos = 1;
-
+    public Animator transition;
 
     public GameObject BossRoom;
     public int BossRoomNumber;
@@ -64,7 +71,7 @@ public class RoomManager : MonoBehaviour
         pos.y = playerYPos;
 
         player.transform.position = pos;
-
+        transition = GameObject.FindWithTag("Transition").GetComponent<Animator>();
         SpawnUpgradeRoom();
 
         
@@ -125,7 +132,7 @@ public class RoomManager : MonoBehaviour
     {
         hallwayNum++;
         
-        if (RoomNumber <= BossRoomNumber)
+        if (RoomNumber < BossRoomNumber)
         {
             if(hallwayNum % 3 == 0)
             {
@@ -183,15 +190,43 @@ public class RoomManager : MonoBehaviour
 
     public void SpawnBossRoom()
     {
-
-        pos = RoomSpawn[RoomNumber].transform.position;
-        pos.y = playerYPos;
-
-        player.transform.position = pos;
+        PlayerData.instance.SaveData();
 
         Instantiate(BossRoom, RoomSpawn[RoomNumber].transform.position, Quaternion.identity);
 
     }
+
+    public void SpawnDocks()
+    {
+        PlayerData.instance.SaveData();
+        Instantiate(Docks, DockSpawn[0].position, Quaternion.identity);
+    }
+
+    public void SpawnOctoBossRoom()
+    {
+        PlayerData.instance.SaveData();
+        Instantiate(OctoBoss, DockSpawn[1].position + Vector3.up, Quaternion.Euler(0, -135, 0));
+    }
+
+    public void StartTransition(int spawns)
+    {
+        StartCoroutine(RoomTransition(spawns));
+    }
+
+    IEnumerator RoomTransition(int spawn)
+    {
+        
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        LoadSceneManager.instance.LoadCredits();
+        pos = DockSpawn[spawn].transform.position;
+        pos.y = playerYPos;
+
+        player.transform.position = pos;
+
+
+    }
+    
 
     public int CalculateEnemySpawns()
     {

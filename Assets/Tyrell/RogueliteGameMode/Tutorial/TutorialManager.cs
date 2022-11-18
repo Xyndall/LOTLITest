@@ -18,7 +18,7 @@ public class TutorialManager : MonoBehaviour
 
     public void TutorialComplete()
     {
-        ES3.Save("TutorialComplete", 1);
+        ES3.Save("TutorialComplete", true);
         LoadSceneManager.instance.LoadStartingArea();
 
     }

@@ -16,5 +16,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 6e7d5e00063dfab4eb03638b3d5ae0db, type: 3}
   itemDescription: gives a random item
   dropItemType: 4
-  amount: 1
-  ItemCost: 10
+  amount: 2
+  ItemCost: 5

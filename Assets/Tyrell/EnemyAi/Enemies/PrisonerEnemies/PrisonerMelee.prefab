@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2281739892711679283}
   - component: {fileID: 2680384995536139010}
   - component: {fileID: 4921325471014319012}
+  - component: {fileID: 1991753813}
   m_Layer: 8
   m_Name: PrisonerMelee
   m_TagString: Enemy
@@ -107,10 +108,13 @@ MonoBehaviour:
   - {fileID: 4968579276583969029}
   - {fileID: 2386881875317800304}
   roomspawn: {fileID: 0}
+  bargespawn: {fileID: 0}
   IsRogueLite: 0
   FreezePaticles: {fileID: 9006409544324220127, guid: 0264786a8b645344ba0453371cd2fa13, type: 3}
+  aSource: {fileID: 1991753813}
   animator: {fileID: 2281739892711679283}
   agentTransform: {fileID: 8999869483944587479}
+  aClip: {fileID: 8300000, guid: aa8c3111578d43c4cb2fcb43f6757005, type: 3}
 --- !u!95 &2281739892711679283
 Animator:
   serializedVersion: 4
@@ -160,7 +164,10 @@ MonoBehaviour:
   - {fileID: 4968579276583969029}
   - {fileID: 2386881875317800304}
   aSource: {fileID: 0}
-  aClip: {fileID: 0}
+  aClip:
+  - {fileID: 8300000, guid: 3a11d6ee31b27e444b09bb75024efda8, type: 3}
+  - {fileID: 8300000, guid: 7ebc9fbdae9f66c41b8cc67ee606272b, type: 3}
+  - {fileID: 8300000, guid: 6a19c42a9b31f9245871477cce9cc3b9, type: 3}
 --- !u!136 &4921325471014319012
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -175,6 +182,102 @@ CapsuleCollider:
   m_Height: 85.836296
   m_Direction: 1
   m_Center: {x: 0.9899998, y: 41.746387, z: 0}
+--- !u!82 &1991753813
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285963492731193792}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7128342418609400471, guid: 7388585f8479f98469cf87504048589d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &4785070527791166841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 7135859334298640843, guid: 8e2b494947475b848aa0c471e8b6a518, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2b494947475b848aa0c471e8b6a518, type: 3}
 --- !u!4 &1447925508314665589 stripped
@@ -256,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 943519695606912941, guid: 91310c02e48593a4aad2f2b0fc6eec3e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2591722512733154176, guid: 91310c02e48593a4aad2f2b0fc6eec3e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -371,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 3813016876434379277, guid: fde4df0b205e23b49809363e13c389ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
+      objectReference: {fileID: 2100000, guid: 2f64f80d91de32c44aa7418c87734feb, type: 2}
     - target: {fileID: 7290285969027246033, guid: fde4df0b205e23b49809363e13c389ee, type: 3}
       propertyPath: m_Name
       value: P1 Left Hand
@@ -383,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 7540762541190520278, guid: fde4df0b205e23b49809363e13c389ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 7955499727096806763, guid: fde4df0b205e23b49809363e13c389ee, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -450,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 48339872883051600, guid: 0de257cd395b18a4d883b1adbc4882a8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 4789163816934416047, guid: 0de257cd395b18a4d883b1adbc4882a8, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -569,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 8566017882863527697, guid: decdf92316e90bc4bb3f9ec75eeb7e7b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: decdf92316e90bc4bb3f9ec75eeb7e7b, type: 3}
 --- !u!4 &1148492283407565149 stripped
@@ -725,7 +828,7 @@ PrefabInstance:
     - target: {fileID: 5055825375918245750, guid: 4cc0d09e2efee624e9c478de48456a10, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 6029398589428940388, guid: 4cc0d09e2efee624e9c478de48456a10, type: 3}
       propertyPath: m_Name
       value: P1 Right Hand

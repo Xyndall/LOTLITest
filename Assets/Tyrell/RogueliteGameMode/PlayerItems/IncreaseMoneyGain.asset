@@ -16,5 +16,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 584bdcb6187a21d44b30cd753580b064, type: 3}
   itemDescription: Increases Money Gain
   dropItemType: 5
-  amount: 5
-  ItemCost: 15
+  amount: 2
+  ItemCost: 5

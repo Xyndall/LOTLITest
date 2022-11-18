@@ -17,4 +17,4 @@ MonoBehaviour:
   itemDescription: Adds and extra inventory slot
   dropItemType: 0
   amount: 1
-  ItemCost: 10
+  ItemCost: 5

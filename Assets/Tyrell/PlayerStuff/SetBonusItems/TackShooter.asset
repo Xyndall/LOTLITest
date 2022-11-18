@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: TackShooter
   icon: {fileID: 21300000, guid: abc0cf94b1e476f49831c2aff76c14a2, type: 3}
-  itemDescription: You ever heard of bloons td
+  itemDescription: 'You ever heard of bloons td: REQ > 3 spread > 3 duplicate > 3
+    RTF upgrades'
   bonusType: 6
   amount: 10

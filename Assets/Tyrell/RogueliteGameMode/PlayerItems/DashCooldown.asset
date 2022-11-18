@@ -17,4 +17,4 @@ MonoBehaviour:
   itemDescription: Decrease Dash Cooldown
   dropItemType: 6
   amount: 1
-  ItemCost: 50
+  ItemCost: 20

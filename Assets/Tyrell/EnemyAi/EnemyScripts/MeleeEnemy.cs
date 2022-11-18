@@ -15,6 +15,8 @@ public class MeleeEnemy : EnemyAiController
 
     private float zigZagDistance = 30;
 
+    public AudioClip aClip;
+
     private void Start()
     {
         //this will find the player transform when the enemy is spawned ///very important
@@ -39,7 +41,8 @@ public class MeleeEnemy : EnemyAiController
         {
             ///Attack code here
             animator.SetTrigger("isAttacking");
-            
+            aSource.PlayOneShot(aClip);
+
             ///End of attack code
             
              alreadyAttacked = true;

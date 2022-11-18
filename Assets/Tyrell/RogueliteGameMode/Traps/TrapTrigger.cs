@@ -11,6 +11,14 @@ public class TrapTrigger : MonoBehaviour
     public float ResetTime;
     public float trapWaitTime;
 
+    AudioSource aSource;
+    public AudioClip aClip;
+
+    private void Start()
+    {
+        aSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         
@@ -29,6 +37,7 @@ public class TrapTrigger : MonoBehaviour
     IEnumerator WaitForTrap()
     {
         yield return new WaitForSeconds(trapWaitTime);
+        aSource.PlayOneShot(aClip);
         _animator.SetTrigger("Trigger");
         StartCoroutine(ResetTrap());
     }

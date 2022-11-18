@@ -23,5 +23,5 @@ MonoBehaviour:
   AddedAmount: 1
   baselevel: 0
   level: 0
-  maxLevel: 5
+  maxLevel: 10
   Cost: 1

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tyrell/Scene/TutorialScene.unity
     guid: 047cdd670f4d5ed479335a287ceb6730
+  - enabled: 1
+    path: Assets/Phoenix/Scene/Credits.unity
+    guid: 3fc61f9fbdec8e645909799c95c162e7
   m_configObjects: {}

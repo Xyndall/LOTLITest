@@ -22,10 +22,14 @@ public class EnemyHealth : MonoBehaviour
 
     public Renderer[] RendMaterials;
 
-    //public AudioSource aSource;
-    //public AudioClip aClip;
+    public AudioSource aSource;
+    public AudioClip[] aClip;
 
-    
+    private void Start()
+    {
+        aSource = GetComponent<AudioSource>();
+        AiController = GetComponent<EnemyAiController>();
+    }
 
     private void Update()
     {
@@ -45,14 +49,15 @@ public class EnemyHealth : MonoBehaviour
 
     public virtual void EnemyKilled(string Name)
     {
-        //aSource.PlayOneShot(aClip);
+        
 
         GameObject enemyDeathParticle = Instantiate(EnemyDeathParticle, transform.position + (Vector3.up * 2), Quaternion.identity);
         enemyDeathParticle.GetComponent<EnemyDeathParticle>().newColor = customColor;
         Destroy(enemyDeathParticle, 2);
 
-        
 
+        Upgradeables.instance.CalculateEnemiesKilled();
+        
         AchievementManager.instance.AddAchievementProgress(Name, 1);
         LevelSystem.instance.GainExperienceScalable(XpGiven, LevelSystem.instance.level);
         MoneyManager.instance.DropMoney();
@@ -61,8 +66,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void EnemyTakeDamage(float amount, bool isCrit)
     {
+        int clip = Random.Range(0, aClip.Length);
+        aSource.PlayOneShot(aClip[clip]);
+
         StartCoroutine(SetHit());
-        //aSource.PlayOneShot(aClip);
+
         GameObject enemyHit = Instantiate(EnemyHitParticle, transform.position + (Vector3.up * 2), Quaternion.Euler(0,0,90));
         enemyHit.GetComponent<EnemyDeathParticle>().newColor = customColor;
         Destroy(enemyHit, 2);
@@ -73,6 +81,7 @@ public class EnemyHealth : MonoBehaviour
         DamagePopUp.Create(enemyPos + pubDamageSpawn, amount, isCrit);
 
         AiController.IncreaseSightRange();
+        Upgradeables.instance.CalculateDamageDealt(amount);
     }
 
     IEnumerator SetHit()

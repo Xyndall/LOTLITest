@@ -26,6 +26,8 @@ public static Inventory instance;
     public List<Item> GunInventoryItemList = new List<Item>();
     public GunInventoryController gunInventoryController;
 
+    
+
     void Start()
     {
 
@@ -35,6 +37,8 @@ public static Inventory instance;
 
     public void SwitchInventoryToHotBar(Item item)
     {
+
+
         //inventory to hotbar, CHECK if we have enaugh space
         foreach (Item i in inventoryItemList)
         {

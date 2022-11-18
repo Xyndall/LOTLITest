@@ -25,12 +25,12 @@ public class DialougeSystem : MonoBehaviour
     public bool dialogueEnded = false;
     public bool outOfRange = true;
 
-    //public AudioClip audioClip;
-    //AudioSource audioSource;
+    public AudioClip aClip;
+    AudioSource audioSource;
 
     void Start()
     {
-        //audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         dialogueText.text = "";
         dialogueBoxGUI.gameObject.SetActive(false);
     }
@@ -106,12 +106,13 @@ public class DialougeSystem : MonoBehaviour
                     {
                         yield return new WaitForSeconds(letterDelay * letterMultiplier);
 
+                        if (aClip) audioSource.PlayOneShot(aClip, 0.02F);
                     }
                     else
                     {
                         yield return new WaitForSeconds(letterDelay);
 
-
+                        if (aClip) audioSource.PlayOneShot(aClip, 0.02F);
                     }
                 }
                 else

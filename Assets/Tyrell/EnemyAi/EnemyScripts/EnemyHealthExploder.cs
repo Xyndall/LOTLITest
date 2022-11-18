@@ -8,6 +8,8 @@ public class EnemyHealthExploder : EnemyHealth
 
     public override void EnemyKilled(string Name)
     {
+        
+
         explode.CheckForPlayer();
         GameObject enemyDeathParticle = Instantiate(EnemyDeathParticle, transform.position, Quaternion.identity);
         enemyDeathParticle.GetComponent<EnemyDeathParticle>().newColor = customColor;

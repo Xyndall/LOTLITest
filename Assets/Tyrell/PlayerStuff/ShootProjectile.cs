@@ -18,9 +18,13 @@ public class ShootProjectile : MonoBehaviour
     bool isCriticalHit;
     public bool Shot;
 
+    AudioSource aSource;
+    public AudioClip shoot;
+
     private void Start()
     {
         upgrades.GetComponent<Upgradeables>();
+        aSource = GetComponent<AudioSource>();
     }
 
     public void ComponentShoot()
@@ -47,6 +51,8 @@ public class ShootProjectile : MonoBehaviour
 
     void Shoot(int numberOfProjectiles)
     {
+        aSource.PlayOneShot(shoot);
+
         CinemachineShake.Instance.ShakeCamera(2f, 0.2f);
 
         GameObject muzFlash = Instantiate(MuzzleFlash, GunPoint.position, Quaternion.identity);

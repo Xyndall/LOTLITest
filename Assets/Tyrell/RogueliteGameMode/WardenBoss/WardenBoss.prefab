@@ -910,6 +910,7 @@ GameObject:
   - component: {fileID: 5051679396230079728}
   - component: {fileID: 3982899334051799738}
   - component: {fileID: 6795885581679212616}
+  - component: {fileID: 3822706788875389065}
   m_Layer: 8
   m_Name: WardenBoss
   m_TagString: Boss
@@ -974,8 +975,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611b75422897a0b489a5d186771d97b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10000
-  MaxHealth: 10000
+  Health: 2500
+  MaxHealth: 2500
   XpGiven: 500
   Name: {fileID: 8886651075414969056}
   HealthBar: {fileID: 8374080128978763310}
@@ -988,6 +989,7 @@ MonoBehaviour:
   - {fileID: 9156156173976107363}
   - {fileID: 489559978029129416}
   - {fileID: 3890519479718828178}
+  isKraken: 0
 --- !u!114 &5051679396230079728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1026,6 +1028,9 @@ MonoBehaviour:
   AnimationStarted: 0
   AnimationFinished: 1
   Root: {fileID: 91775873506437157}
+  WardenSlam: {fileID: 8300000, guid: e8dae82152d535e4282f6a7d495a0cdf, type: 3}
+  WardenCharge: {fileID: 8300000, guid: 7b4451c6715d5be458a29a5a45a951da, type: 3}
+  WardenFart: {fileID: 8300000, guid: d0937a65c37aaf14485faab8e62aa291, type: 3}
 --- !u!136 &3982899334051799738
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1060,6 +1065,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &3822706788875389065
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7771385933403044320}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7128342418609400471, guid: 7388585f8479f98469cf87504048589d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7988258745322244985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1421,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8189684407616958225, guid: 32a30c9301aed72468eb893a94a2ef05, type: 3}
       propertyPath: m_Name
+      value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189684407616958225, guid: 32a30c9301aed72468eb893a94a2ef05, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189684407616958225, guid: 32a30c9301aed72468eb893a94a2ef05, type: 3}
+      propertyPath: m_TagString
       value: Shield
       objectReference: {fileID: 0}
     - target: {fileID: 8857536203321259435, guid: 32a30c9301aed72468eb893a94a2ef05, type: 3}

@@ -26,16 +26,20 @@ public class InventoryUIHandler : MonoBehaviour
     private List<ItemSlot> itemSlotList = new List<ItemSlot>();
 
     public GameObject inventorySlotPrefab;
-    
+
     public Transform invetoryItemTransform;
 
     bool keyPressed;
 
+    private AudioSource aSource;
+    public AudioClip[] aClip;
+
     private void Start()
     {
+        aSource = GetComponent<AudioSource>();
         thisCanvas.blocksRaycasts = false;
         thisCanvas.interactable = false;
-        CloseInventory();
+        
         HUD = GameObject.FindWithTag("HUD"); 
 
         Inventory.instance.onItemChange += UpdateInventoryUI;
@@ -115,6 +119,9 @@ public class InventoryUIHandler : MonoBehaviour
 
     public void OpenInventory()
     {
+        
+        aSource.PlayOneShot(aClip[0]);
+
         keyPressed = true;
         inventoryOpen = true;
         
@@ -147,6 +154,9 @@ public class InventoryUIHandler : MonoBehaviour
 
     public void CloseInventory()
     {
+        
+        aSource.PlayOneShot(aClip[1]);
+
         keyPressed = true;
         inventoryOpen = false;
         
@@ -156,6 +166,13 @@ public class InventoryUIHandler : MonoBehaviour
         thisCanvas.interactable = false;
 
         HUD.SetActive(true);
+    }
+
+    public void PlayClick()
+    {
+        
+        aSource.PlayOneShot(aClip[2]);
+        
     }
 
 

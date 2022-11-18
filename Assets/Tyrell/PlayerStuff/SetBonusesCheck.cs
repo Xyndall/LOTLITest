@@ -96,13 +96,13 @@ public class SetBonusesCheck : MonoBehaviour
 
         #region LifeSteal
         //LifeSteal Set bonus
-        if (upgrades.ProDamageUpgraded >= 2 && upgrades.ProjectilesNumUpgraded >= 2 && upgrades.projectileSizeUpgraded >= 1
+        if (upgrades.ProDamageUpgraded >= 2 && upgrades.ProjectilesNumUpgraded >= 2 && upgrades.projectileSizeUpgraded >= 2
              && _lifeStealSet == false)
         {
             _LifeSteal.setComplete();
             _lifeStealSet = true;
         }
-        else if ((upgrades.ProDamageUpgraded < 2 || upgrades.ProjectilesNumUpgraded < 2 || upgrades.projectileSizeUpgraded < 1)
+        else if ((upgrades.ProDamageUpgraded < 2 || upgrades.ProjectilesNumUpgraded < 2 || upgrades.projectileSizeUpgraded < 2)
            && _lifeStealSet == true)
         {
             _LifeSteal.setRemoved();
@@ -142,12 +142,12 @@ public class SetBonusesCheck : MonoBehaviour
         #endregion
 
         #region CritChance
-        if (upgrades.CritChanceUpgraded >= 8 && _critMakerSet == false)
+        if (upgrades.CritChanceUpgraded >= 7 && _critMakerSet == false)
         {
             _CritMaker.setComplete();
             _critMakerSet = true;
         }
-        else if (upgrades.CritChanceUpgraded < 8 && _critMakerSet == true)
+        else if (upgrades.CritChanceUpgraded < 7 && _critMakerSet == true)
         {
             _CritMaker.setRemoved();
             _critMakerSet = false;

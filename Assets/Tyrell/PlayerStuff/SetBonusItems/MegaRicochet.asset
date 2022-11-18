@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MegaRicochet
   m_EditorClassIdentifier: 
   name: Mega Ricochet
-  icon: {fileID: 21300000, guid: 136ce0bb2ea6b5141b4180bf2e0eea48, type: 3}
-  itemDescription: Adds Damage And Pierce to every bounce
+  icon: {fileID: 21300000, guid: dddf986eb41a2684abdd4c4936bad944, type: 3}
+  itemDescription: 'Adds Damage And speed  to every bounce: REQ > 2 ricochet > 1
+    damage > 1 speed upgrades'
   bonusType: 1
   amount: 10

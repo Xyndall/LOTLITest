@@ -17,4 +17,4 @@ MonoBehaviour:
   itemDescription: Increase movement Speed
   dropItemType: 3
   amount: 1.2
-  ItemCost: 20
+  ItemCost: 10

@@ -8,6 +8,7 @@ public class RangedEnemy : EnemyAiController
 
     public float bulletVelocity = 0f;
 
+    public AudioClip aClip;
     public override void AttackPlayer()
     {
         Vector3 offsetPlayer = player.transform.position - transform.position;
@@ -18,6 +19,8 @@ public class RangedEnemy : EnemyAiController
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
         if (!alreadyAttacked)
         {
+            aSource.PlayOneShot(aClip);
+
             ///Attack code here
             Rigidbody rb = Instantiate(projectile, transform.position + Vector3.up, Quaternion.identity).GetComponent<Rigidbody>();
             rb.transform.LookAt(player.transform);

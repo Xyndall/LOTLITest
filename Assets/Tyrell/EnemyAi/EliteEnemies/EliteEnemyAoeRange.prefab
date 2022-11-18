@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3307521731157396061}
   - component: {fileID: 4607736777158792646}
   - component: {fileID: -8582391336687900752}
+  - component: {fileID: 8357007743651029928}
   m_Layer: 8
   m_Name: EliteEnemyAoeRange
   m_TagString: Enemy
@@ -66,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+  - {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -160,13 +161,16 @@ MonoBehaviour:
   RendMaterials:
   - {fileID: 3307521731157396059}
   roomspawn: {fileID: 0}
+  bargespawn: {fileID: 0}
   IsRogueLite: 0
-  FreezePaticles: {fileID: 0}
+  FreezePaticles: {fileID: 9006409544324220127, guid: 0264786a8b645344ba0453371cd2fa13, type: 3}
+  aSource: {fileID: 8357007743651029928}
   projectile: {fileID: 6671229746167309813, guid: 83de5abd77e2d084289a69a547f56f11, type: 3}
   ProjectilesFired: 24
   projectileSpread: -30
   projectilesSpeed: 50
   isElite: 1
+  aClip: {fileID: 8300000, guid: 31e65227d7640854b985f3816aa22834, type: 3}
 --- !u!114 &-8582391336687900752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +195,106 @@ MonoBehaviour:
   RendMaterials:
   - {fileID: 3307521731157396059}
   aSource: {fileID: 0}
-  aClip: {fileID: 0}
+  aClip:
+  - {fileID: 8300000, guid: 3a11d6ee31b27e444b09bb75024efda8, type: 3}
+  - {fileID: 8300000, guid: 7ebc9fbdae9f66c41b8cc67ee606272b, type: 3}
+  - {fileID: 8300000, guid: 6a19c42a9b31f9245871477cce9cc3b9, type: 3}
+--- !u!82 &8357007743651029928
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3307521731157396062}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7128342418609400471, guid: 7388585f8479f98469cf87504048589d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &3558344308829357646
 PrefabInstance:
   m_ObjectHideFlags: 0

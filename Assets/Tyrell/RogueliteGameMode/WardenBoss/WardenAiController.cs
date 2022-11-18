@@ -49,9 +49,12 @@ public class WardenAiController : MonoBehaviour
     Vector3 Lastpos;
     public Transform Root;
 
+    public AudioClip WardenSlam, WardenCharge, WardenFart;
+    AudioSource aSource;
+
     void Awake()
     {
-
+        aSource = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -69,12 +72,15 @@ public class WardenAiController : MonoBehaviour
 
     public void GroundBreakSpawn()
     {
+
+        
         GameObject particle = Instantiate(GroundBreak, Weapon.position, Quaternion.Euler(-90, 0, 0));
         Destroy(particle, 4);
     }
 
     void TriggerFart()
     {
+        aSource.PlayOneShot(WardenFart);
         _animator.SetTrigger("canFart");
     }
 
@@ -166,7 +172,7 @@ public class WardenAiController : MonoBehaviour
 
     void ChargeAttack()
     {
-        
+        aSource.PlayOneShot(WardenCharge);
          transform.LookAt(player);
          _animator.SetTrigger("ChargeAttack");
         ChargeReady = false;
@@ -203,9 +209,10 @@ public class WardenAiController : MonoBehaviour
         
         if (!alreadyAttacked)
         {
-            
-                ///Attack code here
-                transform.LookAt(player);
+            aSource.PlayOneShot(WardenSlam);
+
+            ///Attack code here
+            transform.LookAt(player);
             transform.Rotate(0, -15, 0);
                 _animator.SetTrigger("isAttacking");
 

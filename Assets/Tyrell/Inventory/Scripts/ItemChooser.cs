@@ -11,17 +11,23 @@ public class ItemChooser : MonoBehaviour
 
     public Image image;
 
-    public WaveGameManager manager;
-    
+    WaveGameManager manager;
+
+    public InventoryUIHandler UIHandler;
 
     private void Start()
     {
+        UIHandler = FindObjectOfType<InventoryUIHandler>();
         manager = FindObjectOfType<WaveGameManager>();
         image.GetComponent<Image>();
 
         
     }
 
+    public void PlayClick()
+    {
+        UIHandler.GetComponent<InventoryUIHandler>().PlayClick();
+    }
 
     public void AddItem(Item newItem)
     {

@@ -12,7 +12,7 @@ public class EnemyAoeRange : EnemyAiController
     public float projectilesSpeed;
     public bool isElite;
 
-
+    public AudioClip aClip;
 
     public override void AttackPlayer()
     {
@@ -33,6 +33,8 @@ public class EnemyAoeRange : EnemyAiController
 
         if (!alreadyAttacked)
         {
+            aSource.PlayOneShot(aClip);
+
             ///Attack code here
             for (int i = 0; i < ProjectilesFired; i++)
             {

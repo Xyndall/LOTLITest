@@ -14,6 +14,8 @@ public class RangedEnemyGuardVar : EnemyAiController
     public Transform GunPoint;
     public GameObject MuzzleFlash;
 
+    public AudioClip aClip;
+
     public override void AttackPlayer()
     {
         
@@ -24,7 +26,7 @@ public class RangedEnemyGuardVar : EnemyAiController
         if (!alreadyAttacked)
         {
             ///Attack code here
-            
+            aSource.PlayOneShot(aClip);
             animator.SetTrigger("isAttacking");
 
             GameObject muzFlash = Instantiate(MuzzleFlash, GunPoint.position, Quaternion.identity);

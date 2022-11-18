@@ -54,9 +54,12 @@ public class EnemySpawnSystem : MonoBehaviour
     [Range(7f, 14f)]
     public float divisionMultiplier = 7f;
 
+    public AudioClip aClip;
+    AudioSource aSource;
 
     private void Start()
     {
+        aSource = GetComponent<AudioSource>();
         StartedWaves = false;
         StartWave();
 
@@ -75,6 +78,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
         if(enemyList.Count == 0 && StartedWaves == true)
         {
+            
             nextWave = true;
             showItems = true;
             StartCoroutine(SpawnEnemiesOverTime());
@@ -94,6 +98,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
     void StartWave()
     {
+        aSource.PlayOneShot(aClip);
         StartedWaves = true;
         WaveNumber = 1;
         maxEnemySpawn = 2;
@@ -112,6 +117,7 @@ public class EnemySpawnSystem : MonoBehaviour
     {
         bool elitesSpawned = false;
         bool bossSpawned = false;
+        aSource.PlayOneShot(aClip);
         yield return new WaitForSeconds(NextWaveTimer);
         
 

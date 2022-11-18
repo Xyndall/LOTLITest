@@ -14,16 +14,16 @@ public class VolumeController : MonoBehaviour
     void Start()
     {
         _slider.GetComponent<Slider>();
-        float vol = PlayerPrefs.GetFloat(ParamName, 1);
+        float vol = ES3.Load(ParamName, 0.5f);
         _slider.value = vol;
         SetVolume(vol);
     }
 
     public void SetVolume(float Value)
     {
-        PlayerPrefs.SetFloat(ParamName, Value);
-        Value *= 80;
-        Value -= 80;
+        ES3.Save(ParamName, Value);
+        Value *= 60;
+        Value -= 60;
 
 
         audioMixer.SetFloat(ParamName, Value);

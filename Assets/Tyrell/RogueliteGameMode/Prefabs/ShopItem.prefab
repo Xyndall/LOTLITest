@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5085565388122158734}
-  m_Mesh: {fileID: 4300000, guid: cf3f4436534167543bc2be828481f593, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 149d3a343e0d17442b962c7068930293, type: 2}
 --- !u!23 &7366966040589908208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16.057243, y: 9.910777, z: 1.4996988}
-  m_Center: {x: 0.88897705, y: -1.8103871, z: 0.0029263794}
+  m_Size: {x: 24.475325, y: 9.910777, z: 2.7946632}
+  m_Center: {x: 1.4146671, y: -1.8103871, z: -0.09086132}
 --- !u!114 &6347803058306748519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +117,11 @@ MonoBehaviour:
   item: {fileID: 0}
   ChoseItem: {fileID: 0}
   foodMeshes:
-  - {fileID: 4300000, guid: ee64ca6d58bc6cd44b6d10ce1cf16c5e, type: 2}
-  - {fileID: 4300000, guid: ef34be3d55eb6b148a645c50fa1e2faa, type: 2}
-  - {fileID: 4300000, guid: d08e14157ec976a4d94fafa203dc69a7, type: 2}
-  - {fileID: 4300000, guid: cf3f4436534167543bc2be828481f593, type: 2}
-  - {fileID: 4300000, guid: e9af8329c30983a4a898aff772140e76, type: 2}
+  - {fileID: 4300000, guid: 149d3a343e0d17442b962c7068930293, type: 2}
+  - {fileID: 4300000, guid: 9e8788a4e7da1d147b4e3d853f181d20, type: 2}
+  - {fileID: 4300000, guid: c9e82fba7c8467a40950353e511dac29, type: 2}
+  - {fileID: 4300000, guid: 62cc5fbe9caa5bd4abf3c268547d85b4, type: 2}
+  - {fileID: 4300000, guid: 5129e7c5706d27b47b0b57717a9de958, type: 2}
 --- !u!1 &6741604506385264774
 GameObject:
   m_ObjectHideFlags: 0

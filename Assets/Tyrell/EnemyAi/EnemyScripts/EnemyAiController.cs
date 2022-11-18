@@ -34,10 +34,13 @@ public class EnemyAiController : MonoBehaviour
 
     //Script for the roguelite mode enemy room spawn
     public EnemyRoomSpawn roomspawn;
+    public EnemyBargeSpawn bargespawn;
     public bool IsRogueLite = false;
 
     public GameObject FreezePaticles;
     #endregion
+
+    public AudioSource aSource;
 
     void Awake()
     {
@@ -47,6 +50,7 @@ public class EnemyAiController : MonoBehaviour
 
     private void Start()
     {
+        aSource = GetComponent<AudioSource>();
         //this will find the player transform when the enemy is spawned ///very important
         if (GameObject.FindWithTag("Player") != null)
         {
@@ -205,7 +209,11 @@ public class EnemyAiController : MonoBehaviour
     {
         if (IsRogueLite == true )
         {
+            if (roomspawn != null)
             roomspawn.RemoveEnemy(Enemy);
+
+            if (bargespawn != null)
+                bargespawn.RemoveEnemy(Enemy);
         }
         
 

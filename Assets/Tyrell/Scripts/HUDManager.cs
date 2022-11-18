@@ -27,16 +27,27 @@ public class HUDManager : MonoBehaviour
     public GameObject SettingPanel;
     public GameObject BasePanel;
     public static bool isPaused = false;
+    public GameObject GameOver;
 
+    //GameOver Stats
+    public TextMeshProUGUI EnemiesKilled;
+    public TextMeshProUGUI Upgrades;
+    public TextMeshProUGUI HightestDamage;
+    public TextMeshProUGUI DamageDealt;
+
+
+    AudioSource aSource;
+    public AudioClip[] aClip;
 
     // Start is called before the first frame update
     public void Start()
     {
-
+        Time.timeScale = 1;
+        aSource = GetComponent<AudioSource>();
         stats = GameObject.FindWithTag("Player").GetComponent<Upgradeables>();
         playermovement = GameObject.FindWithTag("Player").GetComponent<movement>();
         levelStats = GameObject.FindWithTag("Player").GetComponent<LevelSystem>();
-
+        GameOver.SetActive(false);
         HudParent.SetActive(true);
         SettingsParent.SetActive(false);
 
@@ -82,14 +93,26 @@ public class HUDManager : MonoBehaviour
 
     }
 
-    public void HudOpenInventory()
+    public void DeathScreen()
     {
-        InventoryUIHandler.instance.OpenInventory();
+        Time.timeScale = 0;
+        
+        stats.NumberOfUpgrades = stats.ProSpeedUpgraded + stats.ProDamageUpgraded + stats.FireRateUpgraded
+            + stats.ProjectilesNumUpgraded + stats.projectileSizeUpgraded + stats.PierceUpgraded + stats.CritChanceUpgraded
+            + stats.RicochetUpgraded + stats.ExplosionUpgraded + stats.FreezeUpgraded + stats.SpreadUpgraded;
+        EnemiesKilled.text = "Enemies Killed: " + stats.EnemiesKilled;
+        DamageDealt.text = "Damage Dealt: " + stats.DamageDealt;
+        Upgrades.text = "upgrades used: " + stats.NumberOfUpgrades;
+        HightestDamage.text = "Highest Damage: " + stats.HighestDamage;
+
+        GameOver.SetActive(true);
     }
-    
+
+
 
     public void ResumeGame()
     {
+        aSource.PlayOneShot(aClip[1]);
         isPaused = false;
         Time.timeScale = 1;
         SettingsParent.SetActive(false);
@@ -98,6 +121,7 @@ public class HUDManager : MonoBehaviour
 
     public void PauseGame()
     {
+        aSource.PlayOneShot(aClip[0]);
         isPaused = true;
         Time.timeScale = 0;
         PlayerData.instance.SaveData();
@@ -107,5 +131,10 @@ public class HUDManager : MonoBehaviour
         BasePanel.SetActive(true);
     }
 
+
+    public void PlayClick()
+    {
+        aSource.PlayOneShot(aClip[2]);
+    }
 
 }

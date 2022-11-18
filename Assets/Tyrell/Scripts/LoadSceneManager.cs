@@ -17,27 +17,7 @@ public class LoadSceneManager : MonoBehaviour
 
     public void QuitGame()
     {
-        PlayerData.instance.SaveData();
-
         Application.Quit();
-    }
-
-    // Restarts Game, sends it back to Start Level
-    public void RestartGame()
-    {
-        PlayerData.instance.SaveData();
-        SceneManager.LoadScene(1);
-    }
-
-    public void LoadMenu()
-    {
-        PlayerData.instance.SaveData();
-        SceneManager.LoadScene(0);
-    }
-
-    public void LoadGameOver()
-    {
-        SceneManager.LoadScene(2);
     }
 
     public void LoadWaveGame()
@@ -63,4 +43,11 @@ public class LoadSceneManager : MonoBehaviour
         PlayerData.instance.SaveData();
         SceneManager.LoadScene(4);
     }
+
+    public void LoadCredits()
+    {
+        PlayerData.instance.SaveData();
+        SceneManager.LoadScene(5);
+    }
+
 }

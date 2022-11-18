@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxDamage: 20
   MinDamage: 10
-  box: {fileID: 4204315170900777977}
 --- !u!65 &4204315170900777977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -123,7 +122,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8633711207a22fd4c909971b9a052a13, type: 2}
+  - {fileID: 2100000, guid: 2f64f80d91de32c44aa7418c87734feb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

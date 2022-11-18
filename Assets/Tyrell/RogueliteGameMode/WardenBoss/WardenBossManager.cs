@@ -19,6 +19,8 @@ public class WardenBossManager : MonoBehaviour
     public GameObject IdleBoss;
     public Transform WardenBossSpawn;
     public GameObject Laser;
+    public List<GameObject> Bosslist = new List<GameObject>();
+    bool BossKilled = false;
 
 
     //*************** Enemy Spawn variables
@@ -37,8 +39,10 @@ public class WardenBossManager : MonoBehaviour
 
     private void Start()
     {
+        CinemachineZoom.Instance.ZoomOut();
         StartCoroutine(SpawnEnemiesOverTime());
         PhaseTwo = false;
+        BossKilled = false;
         Laser.SetActive(true);
         _switch.SetActive(true);
         Player = GameObject.FindWithTag("Player").GetComponent<Transform>();
@@ -60,18 +64,31 @@ public class WardenBossManager : MonoBehaviour
         }
         //enemy Spawning
 
-        if(_switch.GetComponent<Switch>().leverSwitched &&
+        if (_switch.GetComponent<Switch>().leverSwitched &&
             boilerDestroyed >= 2 && !PhaseTwo)
         {
             PhaseTwo = true;
             BossPhaseTwo();
         }
 
-        
+        Bosslist.RemoveAll(GameObject => GameObject == null);
+           
+
+        if(Bosslist.Count <= 0 && !BossKilled && PhaseTwo)
+        {
+            BossKilled = true;
+            //Spawn Docks here or play animation
+            CinemachineZoom.Instance.ZoomIn();
+            RoomManager.instance.StartTransition(0);
+            RoomManager.instance.SpawnDocks();
+            Destroy(this.gameObject);
+
+
+        }
 
     }
 
-
+    
 
     void BossPhaseTwo()
     {
@@ -82,7 +99,12 @@ public class WardenBossManager : MonoBehaviour
         {
             wall.SetActive(true);
         }
-        Instantiate(WardenBoss, WardenBossSpawn.position, Quaternion.identity);
+        foreach (GameObject enemy in enemyList)
+        {
+            Destroy(enemy);
+        }
+        GameObject boss = Instantiate(WardenBoss, WardenBossSpawn.position, Quaternion.identity);
+        Bosslist.Add(boss);
         Destroy(IdleBoss);
     }
 
@@ -99,12 +121,7 @@ public class WardenBossManager : MonoBehaviour
         {
             if (PhaseTwo)
             {
-                foreach (GameObject enemy in enemyList)
-                {
-                    Destroy(enemy);
-                }
                 break;
-
             }
 
             SpawnRandomEnemy();

@@ -116,6 +116,7 @@ MonoBehaviour:
   _animator: {fileID: 6908947819690314909}
   ResetTime: 20
   trapWaitTime: 0.5
+  aClip: {fileID: 0}
 --- !u!95 &6908947819690314909
 Animator:
   serializedVersion: 4

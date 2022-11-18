@@ -51,8 +51,7 @@ public class Bullet : MonoBehaviour
     public GameObject _bulletHitParticles;
 
 
-    public AudioSource aSource;
-    public AudioClip aClip;
+    
 
     void Start()
     {
@@ -129,7 +128,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        //aSource.PlayOneShot(aClip);
+        
         pierceCount++;
         GameObject _particle = Instantiate(_bulletHitParticles, TipOfBullet.position, Quaternion.identity);
         _particle.transform.localScale += this.transform.localScale;
@@ -168,7 +167,7 @@ public class Bullet : MonoBehaviour
 
 
         if ((WhatisWall.value & 1 << collision.gameObject.layer) != 0 && isArmorPiercer == false
-            || collision.gameObject.tag == "Shield" && isArmorPiercer == false) //== 1<<collision.gameObject.layer)
+            || collision.gameObject.CompareTag("Shield") && isArmorPiercer == false) //== 1<<collision.gameObject.layer)
         {
             
             Destroy(gameObject);
@@ -184,7 +183,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        //aSource.PlayOneShot(aClip);
+        
         ricochetCount++;
         transform.forward = rb.velocity;
         GameObject _particle = Instantiate(_bulletHitParticles, TipOfBullet.position, Quaternion.identity);

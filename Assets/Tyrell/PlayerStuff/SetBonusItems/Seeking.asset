@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Seeking
   icon: {fileID: 21300000, guid: 136ce0bb2ea6b5141b4180bf2e0eea48, type: 3}
-  itemDescription: bullets seek closets enemy
+  itemDescription: 'bullets seek closets enemy: REQ >1 explosion > 2 speed upgrades'
   bonusType: 3
   amount: 0

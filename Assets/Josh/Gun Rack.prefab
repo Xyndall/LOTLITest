@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 4582148083265365337}
   - component: {fileID: 1568114010508643903}
   - component: {fileID: 1611577598620693975}
-  m_Layer: 10
+  - component: {fileID: 3870847841671912636}
+  m_Layer: 14
   m_Name: Gun Rack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8000001, y: 3.6999998, z: 2.9000003}
   m_Center: {x: -1.6000003, y: 1.8499999, z: -0.35}
+--- !u!208 &3870847841671912636
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2521608973512561573}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.4, y: 1.8500001, z: 1.45}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -1.6, y: 1.8500001, z: -0.35000002}
+  m_TimeToStationary: 0.5

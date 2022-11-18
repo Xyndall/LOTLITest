@@ -16,5 +16,5 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 426b4a32198093c4989aa4facc067ef0, type: 3}
   itemDescription: Gain 20 Max Health
   dropItemType: 1
-  amount: 20
+  amount: 25
   ItemCost: 5

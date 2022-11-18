@@ -54,10 +54,14 @@ public class movement : MonoBehaviour
     bool isShooting = false;
     bool isWalking = false;
 
+    //audio
+    AudioSource aSource;
+    public AudioClip aClip;
+
     private void Start()
     {
         inventoryUIHandler = FindObjectOfType<InventoryUIHandler>();
-
+        aSource = GetComponent<AudioSource>();
 
     }
 
@@ -197,6 +201,7 @@ public class movement : MonoBehaviour
     {
         if (DetectMovement == 1)
         {
+            aSource.PlayOneShot(aClip);
             _animator.SetTrigger("isDashing");
             float startTime = Time.time;
 

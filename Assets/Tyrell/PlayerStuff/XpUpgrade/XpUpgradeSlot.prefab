@@ -263,7 +263,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8487249003606763803}
         m_TargetAssemblyTypeName: XpUpgradeSlot, Assembly-CSharp
-        m_MethodName: UpgradeItem
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

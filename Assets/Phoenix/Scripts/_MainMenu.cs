@@ -9,7 +9,7 @@ public class _MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        if (PlayerData.TutorialComplete == 1)
+        if (PlayerData.TutorialCompleted == false)
             SceneManager.LoadScene(3);
         else
             StartTutorial();

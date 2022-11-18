@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2021187917377633160}
   - component: {fileID: 6644459444893265850}
   - component: {fileID: 2124394022872331659}
+  - component: {fileID: 533732791}
   m_Layer: 8
   m_Name: PrisonerThug
   m_TagString: Enemy
@@ -127,10 +128,13 @@ MonoBehaviour:
   - {fileID: 9134392950052233963}
   - {fileID: 717025445831287073}
   roomspawn: {fileID: 0}
+  bargespawn: {fileID: 0}
   IsRogueLite: 0
   FreezePaticles: {fileID: 9006409544324220127, guid: 0264786a8b645344ba0453371cd2fa13, type: 3}
+  aSource: {fileID: 533732791}
   animator: {fileID: 42037275192111966}
   agentTransform: {fileID: 3209897115468554673}
+  aClip: {fileID: 8300000, guid: aa8c3111578d43c4cb2fcb43f6757005, type: 3}
 --- !u!114 &6644459444893265850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +164,10 @@ MonoBehaviour:
   - {fileID: 9134392950052233963}
   - {fileID: 717025445831287073}
   aSource: {fileID: 0}
-  aClip: {fileID: 0}
+  aClip:
+  - {fileID: 8300000, guid: 3a11d6ee31b27e444b09bb75024efda8, type: 3}
+  - {fileID: 8300000, guid: 7ebc9fbdae9f66c41b8cc67ee606272b, type: 3}
+  - {fileID: 8300000, guid: 6a19c42a9b31f9245871477cce9cc3b9, type: 3}
 --- !u!136 &2124394022872331659
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -175,6 +182,102 @@ CapsuleCollider:
   m_Height: 106.28912
   m_Direction: 1
   m_Center: {x: 0.9899998, y: 50.444557, z: 0}
+--- !u!82 &533732791
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7478370305448864161}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -7128342418609400471, guid: 7388585f8479f98469cf87504048589d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &325061965387277689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 1656411223050243112, guid: e8b39724bf35f254da13afdb326ea508, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2718919773908219820, guid: e8b39724bf35f254da13afdb326ea508, type: 3}
       propertyPath: m_Name
       value: Thug RHand
@@ -256,7 +359,7 @@ PrefabInstance:
     - target: {fileID: 428742989023297899, guid: 3aca8a50339d7b04987fd89031a487da, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 464035640603234872, guid: 3aca8a50339d7b04987fd89031a487da, type: 3}
       propertyPath: m_Name
       value: Thug Head
@@ -492,7 +595,7 @@ PrefabInstance:
     - target: {fileID: 891128788655484417, guid: 37204aa2357730541914d7aabf6018ab, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 6085784223295157463, guid: 37204aa2357730541914d7aabf6018ab, type: 3}
       propertyPath: m_Name
       value: Thug Body
@@ -611,7 +714,7 @@ PrefabInstance:
     - target: {fileID: 4003878549217377822, guid: d6f6aa4706c8dab4e8886f9ece9b5c5a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f6aa4706c8dab4e8886f9ece9b5c5a, type: 3}
 --- !u!23 &717025445831287073 stripped
@@ -682,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 4003878549217377822, guid: d6f6aa4706c8dab4e8886f9ece9b5c5a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f6aa4706c8dab4e8886f9ece9b5c5a, type: 3}
 --- !u!4 &4965114063454375784 stripped
@@ -705,7 +808,7 @@ PrefabInstance:
     - target: {fileID: 1977214032438484902, guid: c310b41e48d885a4faec73463f632b53, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cb4c51b3c8933e64c9b8757a7f9c335d, type: 2}
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2520742512033226569, guid: c310b41e48d885a4faec73463f632b53, type: 3}
       propertyPath: m_LocalScale.x
       value: 19.373562
@@ -773,7 +876,7 @@ PrefabInstance:
     - target: {fileID: 3709234063454467023, guid: c310b41e48d885a4faec73463f632b53, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
+      objectReference: {fileID: 2100000, guid: 2f64f80d91de32c44aa7418c87734feb, type: 2}
     - target: {fileID: 7378145165315662747, guid: c310b41e48d885a4faec73463f632b53, type: 3}
       propertyPath: MaxDamage
       value: 40

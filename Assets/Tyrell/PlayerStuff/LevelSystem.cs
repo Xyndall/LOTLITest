@@ -42,8 +42,8 @@ public class LevelSystem : MonoBehaviour
 
     //Audio  
     [Header("Audio")]
-    //public AudioClip levelUpSound;
-    //private AudioSource source;
+    public AudioClip levelUpSound;
+    private AudioSource source;
     //Timers
     private float lerpTimer;
     private float delayTimer;
@@ -58,7 +58,7 @@ public class LevelSystem : MonoBehaviour
         frontXpBar.fillAmount = currentXp / nextLevelXp;
         backXpBar.fillAmount = currentXp / nextLevelXp;
         nextLevelXp = CalculateNextLevelXp();
-        //source = GetComponent<AudioSource>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -79,10 +79,7 @@ public class LevelSystem : MonoBehaviour
             backXpBar.fillAmount = currentXp / nextLevelXp;
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            GainExperienceScalable(25, 1);
-        }
+        
     }
     private void UpdateXpUI() 
     {
@@ -145,7 +142,7 @@ public class LevelSystem : MonoBehaviour
         EXPpoints += EXPpointsGiven;
         GameObject effect = Instantiate(levelUpEffect, transform.position, Quaternion.identity);
         Destroy(effect, 2);
-        //source.PlayOneShot(levelUpSound);
+        source.PlayOneShot(levelUpSound);
     }
 
     private int CalculateNextLevelXp() 

@@ -17,6 +17,8 @@ public class EnemyAOERangedGuardVer : EnemyAiController
     public Transform GunPoint;
     public GameObject MuzzleFlash;
 
+    public AudioClip aClip;
+
     public override void AttackPlayer()
     {
         agent.SetDestination(transform.position);
@@ -35,6 +37,7 @@ public class EnemyAOERangedGuardVer : EnemyAiController
             for (int i = 0; i < ProjectilesFired; i++)
             {
                 animator.SetTrigger("isAttacking");
+                aSource.PlayOneShot(aClip);
 
                 GameObject muzFlash = Instantiate(MuzzleFlash, GunPoint.position, Quaternion.identity);
                 muzFlash.transform.LookAt(player);

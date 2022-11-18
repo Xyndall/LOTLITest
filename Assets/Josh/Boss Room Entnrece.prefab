@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1940152032214750435
 Transform:
@@ -64,12 +64,13 @@ GameObject:
   - component: {fileID: 1578564834790753286}
   - component: {fileID: 8552283578926375431}
   - component: {fileID: 3489907320516007496}
-  m_Layer: 0
+  - component: {fileID: 3037858638602767931}
+  m_Layer: 10
   m_Name: Boss Entrnces
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1578564834790753286
 Transform:
@@ -114,7 +115,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5d0ff0a347c63046a876434ac9f1349, type: 2}
+  - {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,6 +137,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3037858638602767931
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7985467614440966601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000001, y: 2.5, z: 0.3}
+  m_Center: {x: -1.0686562e-12, y: 1.3499999, z: -2.3500004}
 --- !u!1001 &177138580009071475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,9 +201,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -249,9 +271,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -385,6 +415,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1568114010508643903, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2521608973512561573, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
       propertyPath: m_Name
       value: Gun Rack
@@ -407,6 +441,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bucket
       objectReference: {fileID: 0}
+    - target: {fileID: 2436524547246565675, guid: 727a33464e978dc4cb596c34d51d1d28, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007563693383830626, guid: 727a33464e978dc4cb596c34d51d1d28, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8274549455119353370, guid: 727a33464e978dc4cb596c34d51d1d28, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -657,6 +699,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1568114010508643903, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2521608973512561573, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
       propertyPath: m_Name
       value: Gun Rack (3)
@@ -727,6 +773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6842435079361548671, guid: 6812f252c111a1c4e90fc978f0292eba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6812f252c111a1c4e90fc978f0292eba, type: 3}
 --- !u!4 &8559652205110075785 stripped
@@ -745,6 +795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1788248942049238804, guid: 00d712163f75c5844ae34747453cfff7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 1788248942049238806, guid: 00d712163f75c5844ae34747453cfff7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -847,6 +901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.089
       objectReference: {fileID: 0}
+    - target: {fileID: 1568114010508643903, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2521608973512561573, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
       propertyPath: m_Name
       value: Gun Rack (1)
@@ -909,9 +967,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -971,9 +1037,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -1033,6 +1107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1568114010508643903, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 2521608973512561573, guid: 4badcc1578bc33c489d3c496e055e0d6, type: 3}
       propertyPath: m_Name
       value: Gun Rack (2)
@@ -1095,9 +1173,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -1305,9 +1391,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -1367,9 +1461,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -1429,9 +1531,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 87.038
       objectReference: {fileID: 0}
+    - target: {fileID: 3619754839894923287, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
       propertyPath: m_Name
       value: Gnade (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924705211666499746, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1bbbe99a6820d49b0c238a0efde2cd, type: 3}
@@ -1447,9 +1557,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1940152032214750435}
     m_Modifications:
+    - target: {fileID: 5614799566990566173, guid: 1dc2aea4999881a4aa92e0f04b0eaf37, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99f575eb850e23243955a13fb96d1a2d, type: 2}
     - target: {fileID: 5638250857296375406, guid: 1dc2aea4999881a4aa92e0f04b0eaf37, type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638250857296375406, guid: 1dc2aea4999881a4aa92e0f04b0eaf37, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638250857296375406, guid: 1dc2aea4999881a4aa92e0f04b0eaf37, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7263166582632743961, guid: 1dc2aea4999881a4aa92e0f04b0eaf37, type: 3}
       propertyPath: m_RootOrder

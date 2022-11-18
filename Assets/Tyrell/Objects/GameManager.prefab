@@ -170,7 +170,7 @@ MonoBehaviour:
   GunInventoryTransform: {fileID: 0}
   inventoryTransform: {fileID: 0}
   moveX: 0
-  moveY: 200
+  moveY: -140
   upgradeToSpawn: 1
 --- !u!114 &6612633198863433247
 MonoBehaviour:

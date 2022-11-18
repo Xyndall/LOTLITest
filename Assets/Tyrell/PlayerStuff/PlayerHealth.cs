@@ -12,8 +12,11 @@ public class PlayerHealth : MonoBehaviour
     public Renderer[] RendMaterials;
     float HitTime = 0.1f;
 
+    AudioSource aSource;
+    public AudioClip[] aClip;
     private void Start()
     {
+        aSource = GetComponent<AudioSource>();
         upgrade.GetComponent<Upgradeables>();
     }
 
@@ -39,6 +42,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!Invincibility)
         {
+            int clip = Random.Range(0, aClip.Length);
+            aSource.PlayOneShot(aClip[clip]);
             StartCoroutine(SetHit());
             CinemachineShake.Instance.ShakeCamera(5f, 0.2f);
             upgrade.Health -= amount;
@@ -83,16 +88,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void PlayerDied()
     {
-        if (PlayerData.TutorialComplete == 0)
+        if (PlayerData.TutorialCompleted == false && FindObjectOfType<TutorialManager>() != null)
         {
-            if (FindObjectOfType<TutorialManager>() != null)
                 TutorialManager.instance.ShowDeathMSG();
-            
         }
         else
         {
             PlayerData.instance.SaveData();
-            LoadSceneManager.instance.LoadStartingArea();
+            FindObjectOfType<HUDManager>().GetComponent<HUDManager>().DeathScreen();
         }
 
         

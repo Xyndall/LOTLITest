@@ -30,10 +30,7 @@ public class EnemyExploder : EnemyAiController
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && playerInSightRange && !isFrozen) AttackPlayer();
         if (playerInExplodeRange) PlayerInRangeExplodeEnemy();
-        //if (Time.time > nextFlash && flashinTimer > 0)
-        //{
-        //    upgrades._nextFire = Time.time + upgrades._fireRate;
-        //}
+        
         nextFlash += Time.deltaTime;
 
         if (playerInAttackRange && !isFrozen)

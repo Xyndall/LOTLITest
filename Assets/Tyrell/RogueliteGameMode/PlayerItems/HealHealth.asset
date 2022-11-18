@@ -17,4 +17,4 @@ MonoBehaviour:
   itemDescription: Heal to max Health
   dropItemType: 2
   amount: 20
-  ItemCost: 20
+  ItemCost: 15

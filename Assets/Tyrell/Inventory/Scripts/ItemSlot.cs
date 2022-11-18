@@ -11,8 +11,17 @@ public class ItemSlot : MonoBehaviour
 
     public Item Item => item;
 
-    
+    InventoryUIHandler UIHandler;
 
+    private void Start()
+    {
+        UIHandler = FindObjectOfType<InventoryUIHandler>();
+    }
+
+    public void PlayClick()
+    {
+        UIHandler.GetComponent<InventoryUIHandler>().PlayClick();
+    }
 
     public void AddItem(Item newItem)
     {

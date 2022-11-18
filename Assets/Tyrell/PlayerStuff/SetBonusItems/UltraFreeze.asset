@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ultra Freeze
   icon: {fileID: 21300000, guid: b29542423e8d54340a76606f4f185a95, type: 3}
-  itemDescription: Freezes enemies in the explosion area
+  itemDescription: 'Freezes enemies in the explosion area: REQ > 2 explosive > 2
+    freeze upgrades'
   bonusType: 5
   amount: 1

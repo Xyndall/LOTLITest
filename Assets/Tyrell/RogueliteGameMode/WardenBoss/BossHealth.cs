@@ -21,6 +21,8 @@ public class BossHealth : MonoBehaviour
     public Renderer[] RendMaterials;
     float HitTime = 0.1f;
 
+    public bool isKraken = false;
+
     private void Update()
     {
         HealthBar.value = CalculateHealth();
@@ -30,6 +32,11 @@ public class BossHealth : MonoBehaviour
             EnemyKilled("BossKilled");
             
         }
+    }
+
+    private void Start()
+    {
+        CinemachineZoom.Instance.ZoomOut();
     }
 
     void EnemyKilled(string Name)
@@ -77,8 +84,25 @@ public class BossHealth : MonoBehaviour
 
     public void DestroyWardenBoss()
     {
+        PlayerData.instance.SaveData();
         Destroy(gameObject);
+        if (isKraken)
+        {
+            StartCoroutine(WaitForSave());
+        }
     }
+
+    IEnumerator WaitForSave()
+    {
+
+        yield return new WaitForSeconds(5);
+
+        CinemachineZoom.Instance.ZoomIn();
+        LoadSceneManager.instance.LoadCredits();
+
+    }
+    
+    
 
     float CalculateHealth()
     {

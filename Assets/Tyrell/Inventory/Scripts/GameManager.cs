@@ -30,29 +30,12 @@ public class GameManager : MonoBehaviour
     public float moveX;
     public float moveY;
 
-
     public int upgradeToSpawn = 0;
     
 
     private void Start()
     {
         Time.timeScale = 1;
-
-    }
-
-
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Inventory.instance.AddItemToGun(GunItemList[upgradeToSpawn]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            TakeScreenshot();
-        }
 
     }
 
@@ -65,6 +48,7 @@ public class GameManager : MonoBehaviour
             Destroy(currentItemInfo.gameObject);
         }
 
+        buttonPos = Input.mousePosition;
         buttonPos.x -= moveX;
         buttonPos.y += moveY;
 
@@ -80,15 +64,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private string directoryName = "Screenshots";
-    private string fileName = "TestImage.png";
-
-    public void TakeScreenshot()
-    {
-        DirectoryInfo screenshotDirectory = Directory.CreateDirectory(directoryName);
-        string fullPath = Path.Combine(screenshotDirectory.FullName, fileName);
-
-        ScreenCapture.CaptureScreenshot(fullPath);
-    }
 
 }

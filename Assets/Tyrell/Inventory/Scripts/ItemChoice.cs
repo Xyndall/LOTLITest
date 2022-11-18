@@ -15,11 +15,14 @@ public class ItemChoice : MonoBehaviour
     int totalCount = 3;
     int completedCount = 0;
 
+    
 
     private void Start()
     {
         //closes inventory when items show
-        InventoryUIHandler.instance.CloseInventory();
+        //if(InventoryUIHandler.instance.inventoryOpen)
+        //    InventoryUIHandler.instance.CloseInventory();
+
     }
 
     private void Update()

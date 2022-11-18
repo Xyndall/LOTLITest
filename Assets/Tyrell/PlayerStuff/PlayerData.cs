@@ -69,19 +69,38 @@ public class PlayerData : MonoBehaviour
     public int _pierceLevel; 
     #endregion
 
-    public static int TutorialComplete = 0;
-    int tutorialDefault = 0;
+    public static bool TutorialCompleted = false;
+    bool tutorialDefault = false;
 
-    public static int EnhancementInfoClosed = 0;
+    public static bool EnhancementInfoClosed = false;
+    bool InfoDefault = false;
 
     //settings
-
+    float DefaulAudioValue = 0.5f;
+    bool DefaultBoolValue = true;
+    
+    int DefaultResValue;
+    int DefaultQualtityValue = 6;
+    [HideInInspector] public int ResoulutionSet;
+    [HideInInspector]  public int QualitySet;
+    [HideInInspector]  public bool FullscreenSet;
 
 
     public void Start()
     {
-        LoadData(); 
-       
+        Resolution[] res = Screen.resolutions;
+        DefaultResValue = Mathf.Max(res.Length);
+
+        LoadData();
+        
+        Resolution Res = Screen.resolutions[ResoulutionSet - 1];
+        
+        Screen.SetResolution(Res.width, Res.height, Screen.fullScreen);
+        
+
+        QualitySettings.SetQualityLevel(QualitySet);
+        
+        Screen.fullScreenMode = FullscreenSet ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.Windowed;
 
         _levelSystem.level = _Level;
         _levelSystem.currentXp = _currentXP;
@@ -172,13 +191,13 @@ public class PlayerData : MonoBehaviour
         _bigLevel = Big.level;
         _pierceLevel = Pierce.level; 
         
-
+        
 
     }
     public void LoadData()
     {
-        TutorialComplete = ES3.Load("TutorialComplete", tutorialDefault);
-        EnhancementInfoClosed = ES3.Load("EnhancementInfoClosed", tutorialDefault);
+        TutorialCompleted = ES3.Load("TutorialComplete", tutorialDefault);
+        EnhancementInfoClosed = ES3.Load("EnhancementInfoClosed", InfoDefault);
         _Level = ES3.Load("SavedLevel", DefaultLevel);
         _currentXP = ES3.Load("SavedXp", DefaultCurrentXp);
         _nextLevelXp = ES3.Load("NextLevelXp", DefaultNextLevelXp);
@@ -195,8 +214,15 @@ public class PlayerData : MonoBehaviour
         _spreadLevel = ES3.Load("SpreadUpgradeLevel", DefaultUpgradeLevel);
         _freezeLevel = ES3.Load("FreezeUpgradeLevel", DefaultUpgradeLevel);
         _bigLevel = ES3.Load("BigUpgradeLevel", DefaultUpgradeLevel);
-        _pierceLevel = ES3.Load("PierceUpgradeLevel", DefaultUpgradeLevel); 
-        
+        _pierceLevel = ES3.Load("PierceUpgradeLevel", DefaultUpgradeLevel);
+
+        ES3.Load("SFXVolume", DefaulAudioValue);
+        ES3.Load("MusicVolume", DefaulAudioValue);
+        ES3.Load("UIVolume", DefaulAudioValue);
+        ResoulutionSet = ES3.Load("Resolution", DefaultResValue);
+        QualitySet = ES3.Load("Quality", DefaultQualtityValue);
+        FullscreenSet = ES3.Load("FullScreen", DefaultBoolValue);
+
     }
 
     public void SaveData()
@@ -217,8 +243,12 @@ public class PlayerData : MonoBehaviour
         ES3.Save("SpreadUpgradeLevel", _spreadLevel);
         ES3.Save("FreezeUpgradeLevel", _freezeLevel);
         ES3.Save("BigUpgradeLevel", _bigLevel);
-        ES3.Save("PierceUpgradeLevel", _pierceLevel); 
-        
+        ES3.Save("PierceUpgradeLevel", _pierceLevel);
+
+        ES3.Save("Resolution", ResoulutionSet);
+        ES3.Save("FullScreen", FullscreenSet);
+        ES3.Save("Quality", QualitySet);
+
 
     }
 
